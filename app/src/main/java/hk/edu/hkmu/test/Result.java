@@ -59,8 +59,18 @@ public class Result extends AppCompatActivity {
 
         Intent intent = getIntent();
         String searchstr = intent.getStringExtra(InputName.EXTRA_MESSAGE);
+        if(searchstr!=null){//for compatibility
+            inputname = true;
+            inputcri = false;
+        }else{
+            inputname = false;
+            inputcri = true;
+        }
 
         String checkSortingMethod = intent.getStringExtra(InputName.EXTRA_CHECK);
+        checkSortingMethod = intent.getStringExtra(InputCri.EXTRA_CHECK);
+
+
         if(checkSortingMethod.equals("Sortbyid")){
             SchoolInfo.sortbyId();
         }else if(checkSortingMethod.equals("Sortbyname")){
@@ -69,7 +79,7 @@ public class Result extends AppCompatActivity {
             SchoolInfo.sortbyDistrict();
         }
 
-        if(Locale.getDefault().getLanguage().equals(new Locale("en").getLanguage())) {
+        if(Locale.getDefault().getLanguage().equals(new Locale("en").getLanguage())&&inputname) {
             searching.ensearchname(searchstr);
             SimpleAdapter adapter = new SimpleAdapter(
                     this,
@@ -79,7 +89,7 @@ public class Result extends AppCompatActivity {
                     new int[]{R.id.name, R.id.tele, R.id.address}
             );
             listView.setAdapter(adapter);
-        }else if(Locale.getDefault().getLanguage().equals(new Locale("zh").getLanguage())){
+        }else if(Locale.getDefault().getLanguage().equals(new Locale("zh").getLanguage())&&inputname){
             searching.chsearchname(searchstr);
             SimpleAdapter adapter = new SimpleAdapter(
                     this,
