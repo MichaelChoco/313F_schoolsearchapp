@@ -18,22 +18,24 @@
         android:padding="10px">
 
         <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="match_parent">
+            android:layout_weight="75">
+
             <LinearLayout
-                android:scrollbars="vertical"
-                android:scrollbarAlwaysDrawVerticalTrack="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="10px">
+                android:padding="10px"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Useful Websites"
                     android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:text="Useful Websites" />
+                    android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/web1"
@@ -49,6 +51,18 @@
 
                 <ImageButton
                     android:id="@+id/web3"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                <ImageButton
+                    android:id="@+id/web4"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                <ImageButton
+                    android:id="@+id/web5"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     tools:srcCompat="@tools:sample/backgrounds/scenic" />
