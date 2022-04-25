@@ -41,7 +41,9 @@
                     android:id="@+id/web1"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    tools:srcCompat="@drawable/web1" />
+                    android:src="@drawable/web1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"/>
 
                 <ImageButton
                     android:id="@+id/web2"
@@ -51,18 +53,6 @@
 
                 <ImageButton
                     android:id="@+id/web3"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-                <ImageButton
-                    android:id="@+id/web4"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-                <ImageButton
-                    android:id="@+id/web5"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     tools:srcCompat="@tools:sample/backgrounds/scenic" />

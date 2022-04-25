@@ -11,35 +11,32 @@ import android.widget.ImageButton;
 
 public class UsefulWeb extends AppCompatActivity {
 
-    private Button backbutton;
-    private ImageButton web1;
+    private Button backButton;
+    private ImageButton webButton1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_useful_web);
 
-        backbutton = findViewById(R.id.back_button);
-        web1 = findViewById(R.id.web1);
-        
-        web1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                webLink("https://applications.edb.gov.hk/schoolsearch/schoolsearch.aspx?langno=1");
-            }
-        });
-        
-        backbutton.setOnClickListener(new View.OnClickListener() {
+        backButton = findViewById(R.id.back_button);
+        webButton1 = findViewById(R.id.web1);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(UsefulWeb.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
-    }
-    public void webLink(String url){
-        Intent intent=new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(url));
-        startActivity(intent);
+
+        webButton1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://applications.edb.gov.hk/schoolsearch/schoolsearch.aspx?langno=1");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }
