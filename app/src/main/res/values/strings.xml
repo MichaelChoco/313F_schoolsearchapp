@@ -27,6 +27,7 @@
     <string name="usefulweb">Useful Website</string>
 
     <string-array name="categoryspinner">
+        <item>ANY</item>
         <item>Aided Primary Schools</item>
         <item>Aided Secondary Schools</item>
         <item>Aided Special Schools</item>
@@ -45,17 +46,20 @@
         <item>Private Secondary Schools (Day/Evening)</item>
     </string-array>
     <string-array name="genderspinner">
+        <item>ANY</item>
         <item>Male</item>
         <item>Female</item>
         <item>CO-ED</item>
     </string-array>
     <string-array name="sessionspinner">
+        <item>ANY</item>
         <item>A.M.</item>
         <item>P.M</item>
         <item>EVENING</item>
         <item>WHOLE DAY</item>
     </string-array>
     <string-array name="districtspinner">
+        <item>ANY</item>
         <item>KOWLOON CITY</item>
         <item>SHA TIN</item>
         <item>WAN CHAI</item>
@@ -77,6 +81,7 @@
         <item>SHUM SHUI PO</item>
     </string-array>
     <string-array name="fintypespineer">
+        <item>ANY</item>
         <item>AIDED</item>
         <item>CAPUT</item>
         <item>DIRECT SUBSIDY SCHEME</item>
@@ -86,12 +91,14 @@
         <item>PRIVATE INDEPENDENT SCH SCHEME</item>
     </string-array>
     <string-array name="levelspinner">
+        <item>ANY</item>
         <item>KINDERGARTEN</item>
         <item>KINDERGARTEN-CUM-CHILD CARE CENTRES</item>
         <item>PRIMARY</item>
         <item>SECONDARY</item>
     </string-array>
     <string-array name="religionspinner">
+        <item>ANY</item>
         <item>CATHOLICISM</item>
         <item>PROTESTANTISM / CHRISTIANITY</item>
         <item>NOT APPLICABLE</item>
