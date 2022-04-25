@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button name;
     private Button criteria;
+    private Button website;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +24,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         name = findViewById(R.id.button1);
         criteria = findViewById(R.id.button2);
+        website = findViewById(R.id.button3);
         name.setOnClickListener(this);
         criteria.setOnClickListener(this);
+        website.setOnClickListener(this);
     }
 
     public void onClick(View button) {
@@ -34,6 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             finish();
         } else if (button.getId() == R.id.button2) {
             Intent intent = new Intent(MainActivity.this, InputCri.class);
+            startActivity(intent);
+            finish();
+        } else if (button.getId() == R.id.button3) {
+            Intent intent = new Intent(MainActivity.this, UsefulWeb.class);
             startActivity(intent);
             finish();
         }

@@ -24,6 +24,7 @@
     <string name="sss">進階搜尋</string>
     <string name="submit">提交</string>
     <string name="backtoresearch">返回搜尋</string>
+    <string name="usefulweb">實用網站</string>
 
     <string-array name="categoryspinner">
         <item>資助小學</item>

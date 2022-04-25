@@ -24,6 +24,7 @@
     <string name="sss">Advance Searching</string>
     <string name="submit">Submit</string>
     <string name="backtoresearch">Go Back To Research</string>
+    <string name="usefulweb">Useful Website</string>
 
     <string-array name="categoryspinner">
         <item>Aided Primary Schools</item>
