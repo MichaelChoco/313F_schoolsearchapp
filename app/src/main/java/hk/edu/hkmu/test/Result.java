@@ -29,7 +29,8 @@ public class Result extends AppCompatActivity {
     private String TAG = "Result";
     private ListView listView;
     private Button backbutton;
-
+    boolean inputname;
+    boolean inputcri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,20 +57,33 @@ public class Result extends AppCompatActivity {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
+        String searchstr = "";
+        ArrayList<String> searcharray;
         Intent intent = getIntent();
-        String searchstr = intent.getStringExtra(InputName.EXTRA_MESSAGE);
-        if(searchstr!=null){//for compatibility
-            inputname = true;
-            inputcri = false;
+        if(intent.getStringExtra("FROM").equals("Name")){
+            searchstr = intent.getStringArrayListExtra(InputName.EXTRA_MESSAGE).get(0);
+            if(Locale.getDefault().getLanguage().equals(new Locale("en").getLanguage())) {
+                searching.ensearchname(searchstr);
+            }else if(Locale.getDefault().getLanguage().equals(new Locale("zh").getLanguage())) {
+                searching.chsearchname(searchstr);
+            }
         }else{
-            inputname = false;
-            inputcri = true;
+            searcharray = intent.getStringArrayListExtra(InputCri.EXTRA_MESSAGE);
+            if(Locale.getDefault().getLanguage().equals(new Locale("en").getLanguage())) {
+                searching.ensearchcrit(searcharray);
+            }else if(Locale.getDefault().getLanguage().equals(new Locale("zh").getLanguage())){
+                searching.chsearchcrit(searcharray);
+            }
         }
-
+//        if(searchstr!=null){//for compatibility
+//            inputname = true;
+//            inputcri = false;
+//        }else{
+//            inputname = false;
+//            inputcri = true;
+//        }
         String checkSortingMethod = intent.getStringExtra(InputName.EXTRA_CHECK);
         checkSortingMethod = intent.getStringExtra(InputCri.EXTRA_CHECK);
-
 
         if(checkSortingMethod.equals("Sortbyid")){
             SchoolInfo.sortbyId();
@@ -79,8 +93,7 @@ public class Result extends AppCompatActivity {
             SchoolInfo.sortbyDistrict();
         }
 
-        if(Locale.getDefault().getLanguage().equals(new Locale("en").getLanguage())&&inputname) {
-            searching.ensearchname(searchstr);
+        if(Locale.getDefault().getLanguage().equals(new Locale("en").getLanguage())) {
             SimpleAdapter adapter = new SimpleAdapter(
                     this,
                     searching.searchlist,
@@ -89,8 +102,7 @@ public class Result extends AppCompatActivity {
                     new int[]{R.id.name, R.id.tele, R.id.address}
             );
             listView.setAdapter(adapter);
-        }else if(Locale.getDefault().getLanguage().equals(new Locale("zh").getLanguage())&&inputname){
-            searching.chsearchname(searchstr);
+        }else if(Locale.getDefault().getLanguage().equals(new Locale("zh").getLanguage())){
             SimpleAdapter adapter = new SimpleAdapter(
                     this,
                     searching.searchlist,
@@ -169,7 +181,7 @@ public class Result extends AppCompatActivity {
                             }else{resultFax.setText("傳真號碼: 不適用");}
                             resultReligion.setText("宗教: "+contact.get(SchoolInfo.chreligion));
 
-                            locButton = "顯示地圖";
+                            locButton = "在地圖顯示";
                         }
 
                         builder.setNegativeButton(locButton, new DialogInterface.OnClickListener(){

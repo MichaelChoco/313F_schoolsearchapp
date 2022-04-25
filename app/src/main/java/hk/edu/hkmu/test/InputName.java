@@ -10,11 +10,13 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class InputName extends AppCompatActivity {
     static String EXTRA_MESSAGE = "EXTRA_MESSAGE";
+    static String FROM = "FROM";
     static String EXTRA_CHECK = "EXTRA_CHECK";
     private EditText EditText;
     private Button SubmitButton;
@@ -47,10 +49,14 @@ public class InputName extends AppCompatActivity {
                 }
 
                 String Str = EditText.getText().toString();
+                ArrayList<String> list = new ArrayList<>();
+                list.add(Str);
                 Intent intent = new Intent(InputName.this, Result.class);
+                intent.putExtra(FROM, "Name");
                 intent.putExtra(EXTRA_CHECK, returnString);
-                intent.putExtra(EXTRA_MESSAGE, Str);
+                intent.putStringArrayListExtra(EXTRA_MESSAGE, list);
                 startActivity(intent);
+                finish();
             }
         });
     }
