@@ -1,15 +1,9 @@
-package hk.edu.hkmu.test;
-
-import org.apache.commons.text.WordUtils;
-import org.json.JSONObject;
+package hk.edu.hkmu.s313project;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.Locale;
-import java.util.stream.Collectors;
 
 public class SchoolInfo {
     public static String schoolid = "ID";

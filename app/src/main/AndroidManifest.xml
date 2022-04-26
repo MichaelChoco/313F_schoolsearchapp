@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="hk.edu.hkmu.test">
+    package="hk.edu.hkmu.s313project">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -14,22 +14,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
         <activity
-            android:name=".UsefulWeb"
+            android:name="hk.edu.hkmu.s313project.UsefulWeb"
             android:exported="false" />
         <activity
-            android:name=".searching"
+            android:name="hk.edu.hkmu.s313project.searching"
             android:exported="false" />
         <activity
-            android:name=".Result"
+            android:name="hk.edu.hkmu.s313project.Result"
             android:exported="false" />
         <activity
-            android:name=".InputCri"
+            android:name="hk.edu.hkmu.s313project.InputCri"
             android:exported="false" />
         <activity
-            android:name=".InputName"
+            android:name="hk.edu.hkmu.s313project.InputName"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="hk.edu.hkmu.s313project.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

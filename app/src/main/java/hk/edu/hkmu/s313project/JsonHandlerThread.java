@@ -1,4 +1,4 @@
-package hk.edu.hkmu.test;
+package hk.edu.hkmu.s313project;
 
 import android.util.Log;
 
@@ -15,8 +15,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Locale;
 
 public class JsonHandlerThread extends Thread {
     private static final String TAG = "JsonHandlerThread";

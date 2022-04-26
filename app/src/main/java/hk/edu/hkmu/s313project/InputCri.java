@@ -1,4 +1,4 @@
-package hk.edu.hkmu.test;
+package hk.edu.hkmu.s313project;
 
 import androidx.appcompat.app.AppCompatActivity;
 

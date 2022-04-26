@@ -1,4 +1,4 @@
-package hk.edu.hkmu.test;
+package hk.edu.hkmu.s313project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,11 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class InputName extends AppCompatActivity {
     static String EXTRA_MESSAGE = "EXTRA_MESSAGE";

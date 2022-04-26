@@ -1,8 +1,6 @@
-package hk.edu.hkmu.test;
+package hk.edu.hkmu.s313project;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 
 import java.util.ArrayList;
 import java.util.HashMap;

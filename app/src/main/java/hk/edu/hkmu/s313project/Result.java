@@ -1,4 +1,4 @@
-package hk.edu.hkmu.test;
+package hk.edu.hkmu.s313project;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,14 +9,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
-import org.json.*;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.RadioButton;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -82,6 +79,7 @@ public class Result extends AppCompatActivity {
 //            inputname = false;
 //            inputcri = true;
 //        }
+
         String checkSortingMethod = intent.getStringExtra(InputName.EXTRA_CHECK);
         checkSortingMethod = intent.getStringExtra(InputCri.EXTRA_CHECK);
 
