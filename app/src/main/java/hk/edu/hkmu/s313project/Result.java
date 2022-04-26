@@ -57,6 +57,18 @@ public class Result extends AppCompatActivity {
         String searchstr = "";
         ArrayList<String> searcharray;
         Intent intent = getIntent();
+        
+        String checkSortingMethod = intent.getStringExtra(InputName.EXTRA_CHECK);
+        checkSortingMethod = intent.getStringExtra(InputCri.EXTRA_CHECK);
+
+        if(checkSortingMethod.equals("Sortbyid")){
+            SchoolInfo.sortbyId();
+        }else if(checkSortingMethod.equals("Sortbyname")){
+            SchoolInfo.sortbyName();
+        }else if(checkSortingMethod.equals("Sortbydistrict")){
+            SchoolInfo.sortbyDistrict();
+        }
+        
         if(intent.getStringExtra("FROM").equals("Name")){
             searchstr = intent.getStringArrayListExtra(InputName.EXTRA_MESSAGE).get(0);
             if(Locale.getDefault().getLanguage().equals(new Locale("en").getLanguage())) {
@@ -80,16 +92,7 @@ public class Result extends AppCompatActivity {
 //            inputcri = true;
 //        }
 
-        String checkSortingMethod = intent.getStringExtra(InputName.EXTRA_CHECK);
-        checkSortingMethod = intent.getStringExtra(InputCri.EXTRA_CHECK);
-
-        if(checkSortingMethod.equals("Sortbyid")){
-            SchoolInfo.sortbyId();
-        }else if(checkSortingMethod.equals("Sortbyname")){
-            SchoolInfo.sortbyName();
-        }else if(checkSortingMethod.equals("Sortbydistrict")){
-            SchoolInfo.sortbyDistrict();
-        }
+        
 
         if(Locale.getDefault().getLanguage().equals(new Locale("en").getLanguage())) {
             SimpleAdapter adapter = new SimpleAdapter(
