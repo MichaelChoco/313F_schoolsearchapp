@@ -12,9 +12,8 @@
         android:background="@drawable/group_student"/>
 
     <TableLayout
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:stretchColumns="*"
         >
 
@@ -26,12 +25,15 @@
         android:backgroundTint="@color/HKMU_Blue"
         android:text="@string/mainname" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/HKMU_Blue"
-        android:text="@string/maincat" />
+
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/HKMU_Blue"
+                android:text="@string/maincat"/>
         </TableRow>
         <TableRow>
             <Button
@@ -39,8 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/HKMU_Blue"
-                android:text="@string/usefulweb"
-                android:layout_span="2"/>
+                android:text="@string/usefulweb"/>
         </TableRow>
 
     </TableLayout>
